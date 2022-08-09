@@ -48,9 +48,9 @@ for (let i = 0; i <arr.length; i++) {
 
 function forEach(){
     // Print all even numbers in array
-arr.forEach(even =>{
-    if(even % 2 == 0) {
-        console.log(even)
+arr.forEach(evenItem =>{
+    if(evenItem % 2 == 0) {
+        console.log(evenItem)
      }
 })
 // Add 2 to every element in the array and print it
