@@ -45,3 +45,24 @@ for (let i = 0; i <arr.length; i++) {
     }
 }
 }
+
+function forEach(){
+    // Print all even numbers in array
+arr.forEach(even =>{
+    if(even % 2 == 0) {
+        console.log(even)
+     }
+})
+// Add 2 to every element in the array and print it
+arr.forEach(element => {
+    console.log(element + 2)
+});
+// Check every element if it's odd or even and print a message
+arr.forEach(oddOrEven =>{
+    if(oddOrEven % 2 ==0) {
+        console.log(oddOrEven + "is even")
+    } else {
+        console.log(oddOrEven + "is odd")
+    }
+})
+}
