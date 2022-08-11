@@ -102,9 +102,70 @@ console.log(combinedArr = [...testArr, ...testArr1])
 
 // map and set testing
 // Also Known As playground 
-let ongyMap = new Map()
-ongyMap.set('age', 999999)
-ongyMap.set('height', 999999)
-ongyMap.set('married', false)
-alert(ongyMap.has('age'));
-console.log(ongyMap)
+// let ongyMap = new Map();
+// ongyMap.set('age', 999999);
+// ongyMap.set('height', 999999);
+// ongyMap.set('married', false);
+// // alert(ongyMap.has('age'));
+// console.log(ongyMap);
+
+// map task 
+
+
+
+
+
+// Create a new Map
+let person = new Map();
+// Fill the Map with entries
+person.set('name', 'John');
+person.set('secondName', 'Georgiev');
+person.set('age', 23);
+person.set('height', '190cm')
+person.set('job', false)
+
+// Create a second Map with Object.entries() method
+let obj = Object.entries({
+    "name" : 'Martin',
+    "secondName" : 'Marinov'
+});
+let random = new Map(obj)
+
+let string1 = "boyan";
+console.log(`ucha programirane s ${string1}`)
+// Extract the first and second element from the first Map as key and value pair
+console.log(person.get())
+console.log(person.get('name'))
+let arrayFromMapKeys = [...person.keys()]
+let arrayFromMapValues = [...person.values()]
+console.log(`${arrayFromMapKeys[0]}, ${arrayFromMapValues[0]}`)
+console.log(`${arrayFromMapKeys[1]}, ${arrayFromMapValues[1]}`)
+// console.log(arrayFromMap[0])
+// Check if a key already exists in the first Map and:
+console.log(person.has('name'))
+// if it exists, update the entry's current value to a new one
+if (person.has('name')) {
+    person.set('name', 'anton')
+}
+console.log(person)
+// if it does not exist, append a new entry to the end of the Map with that key and some value
+if (!person.has('title')) {
+    person.set('title', 'donDomat')
+}
+// Check what is the size of the first Map and compare if it's equal to the size of the second Map
+if (person.size == random.size){
+    console.log("they are equal")
+} else{
+    console.log("they are not equal")
+}
+// Try to add, update and remove entries from the first Map.
+person.set('computer', true)
+if (person.has('name')) {
+    person.set('name', 'George')
+}
+person.delete('secondName')
+console.log(person)
+// Print all of the values of the first Map - one line (not for loop)
+console.log(person.values())
+// Print all of the keys of the Map - same
+console.log(person.keys())
