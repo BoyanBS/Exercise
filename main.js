@@ -1,4 +1,4 @@
-const arr = [10, 16, 25, 5, 302, 160, 88, 501, 250, 110];
+var arr = [10, 16, 25, 5, 302, 160, 88, 501, 250, 110];
 
 console.log(arr)
 function firstTask(){
@@ -15,7 +15,10 @@ console.log('areBiggerThan2', areBiggerThan2);
 const isNumberBiggerThan500 = arr.every((arr) => arr > 500);
 console.log('isNumberBiggerThan500', isNumberBiggerThan500);
 // Multiplay every number by 10
-const multiplyedArray = arr.map(i => i*10)
+const multiplyedArray = arr.map( element=> element*10)
+// const multiplyedArray = arr.map(function(element){
+    // return element *3;
+// });- with normal function 
 console.log('multiplyedArray', multiplyedArray);
 // Sort the array
 const sortedArray = arr.sort();
@@ -66,3 +69,42 @@ arr.forEach(oddOrEven =>{
     }
 })
 }
+
+function sliceSplice(){
+    const arr1 = [10, 16, 25, 5, 302, 160, 88, 501, 250, 110];
+// Delete 3 items from the beginning of the array
+const arrDeleteStart = arr1.slice(3)
+console.log(arrDeleteStart)
+// Delete 3 items starting from the end of the array
+const arrDeleteEnd = arr1.slice(0,-3)
+console.log(arrDeleteEnd)
+// Insert one new element after the second element in the array
+arr1.splice(2, 0, 999999)
+console.log(arr)
+// Insert two new elements after the third element in the array
+arr1.splice(2, 1, 888888, 777777)
+console.log(arr)
+// Replace the third element with a new one
+arr1.splice(2, 1, 666666)
+console.log(arr1)
+// Delete one element starting from the second element and insert three new elements (in one line)
+// arr.splice(2, 1, 999999, 999999, 999999)
+arr1.splice(2,3,'999999','999999', '999999');
+console.log(arr1);
+
+// Create two new arrays both of them containing two elements. Create third array which
+//  has every element from the two newly created array (in one line)
+const testArr = [1, 2]
+const testArr1 = [3, 4]
+console.log(combinedArr = [...testArr, ...testArr1])    
+
+}
+
+// map and set testing
+// Also Known As playground 
+let ongyMap = new Map()
+ongyMap.set('age', 999999)
+ongyMap.set('height', 999999)
+ongyMap.set('married', false)
+alert(ongyMap.has('age'));
+console.log(ongyMap)
