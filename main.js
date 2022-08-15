@@ -110,12 +110,8 @@ console.log(combinedArr = [...testArr, ...testArr1])
 // console.log(ongyMap);
 
 // map task 
-
-
-
-
-
-// Create a new Map
+function mapPractise(){
+    // Create a new Map
 let person = new Map();
 // Fill the Map with entries
 person.set('name', 'John');
@@ -123,7 +119,7 @@ person.set('secondName', 'Georgiev');
 person.set('age', 23);
 person.set('height', '190cm')
 person.set('job', false)
-
+console.log(person.keys())
 // Create a second Map with Object.entries() method
 let obj = Object.entries({
     "name" : 'Martin',
@@ -169,3 +165,47 @@ console.log(person)
 console.log(person.values())
 // Print all of the keys of the Map - same
 console.log(person.keys())
+}
+
+
+// function setPrectise() {
+    // Create a new Set with days of week
+let daysOfTheWeek = new Set(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
+console.log(daysOfTheWeek)
+// Convert a set into an array (two ways of doing it)
+const dotwm = [...daysOfTheWeek]
+console.log(dotwm)
+// for(let k = 0; k<dotwm.length; k++){
+//     console.log(`${dotwm}`)
+// }
+const anotherArray = Array.from(daysOfTheWeek)
+console.log(anotherArray)
+var emptyArray = []
+daysOfTheWeek.forEach(day =>{
+    emptyArray.push(day)
+})
+console.log(emptyArray)
+// Create an array with duplicate elements in it. Remove the duplicates using set.
+let dublicateSet = new Set()
+dublicateSet.add("boomerang");
+dublicateSet.add("random")
+dublicateSet.add("anotherRandom")
+dublicateSet.add("boomerang")
+dublicateSet.add("Monday")
+console.log(dublicateSet)
+// Check if a value exists in a set
+console.log(daysOfTheWeek.has("Monday"))
+// Check the length of a set
+console.log(daysOfTheWeek.size)
+// Use two sets to check if an item exists in both of them
+console.log(daysOfTheWeek.has("Monday"))
+console.log(dublicateSet.has("Monday"))
+let check = emptyArray.includes("Monday")
+console.log(check)
+// Remove set member
+console.log(daysOfTheWeek.delete("Tuesday"))
+// Loop over set (two ways of doing it)
+ for (let i = 0; i < dotwm.length; i++) {
+    console.log("i looped over")
+ }
+// }
