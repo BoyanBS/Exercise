@@ -168,7 +168,7 @@ console.log(person.keys())
 }
 
 
-// function setPrectise() {
+function setPrectise() {
     // Create a new Set with days of week
 let daysOfTheWeek = new Set(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
 console.log(daysOfTheWeek)
@@ -208,4 +208,22 @@ console.log(daysOfTheWeek.delete("Tuesday"))
  for (let i = 0; i < dotwm.length; i++) {
     console.log("i looped over")
  }
-// }
+}
+function classConstructor(){
+    
+class firstConstructor {
+    constructor(firstName, secondMame, number) {
+        this.name = firstName;
+        this.anotherName = secondMame;
+        this.phoneNumber = number
+    }
+    get firstConstructor(){
+        console.log(this.name)
+    }
+}
+
+
+let theActualPatternToLogIt = new firstConstructor("Kolio", "Georgiev", 088379127)
+console.log(theActualPatternToLogIt)
+console.log("Needs more work :D")
+}
